@@ -1,0 +1,42 @@
+.container {
+    height: calc(80vh - 20px);
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 0;
+
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-areas:
+        "mainContent mainContent mainContent sidebar"
+        "twin twin twin-sub twin-sub"
+    ;
+}
+
+.main-content {
+    grid-area: mainContent;
+    background-color: #6FC041;
+
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #B36AE2;
+}
+
+.twin {
+    grid-area: twin;
+    background-color: #F3901A;
+}
+
+.twin-sub {
+    grid-area: twin-sub;
+    background-color: #F3901A;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

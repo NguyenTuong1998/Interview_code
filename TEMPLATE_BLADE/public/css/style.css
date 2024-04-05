@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    color: #fff;
+    font-size: 30px;
+}
+
+header,
+footer {
+    height: 10vh;
+    background-color: #52A7F9;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+footer {
+    background-color: #0365C0;
+}
+
+.container {
+    height: calc(80vh - 20px);
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 0;
+
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-areas:
+        "mainContent mainContent mainContent sidebar"
+        "twin twin twin-sub twin-sub"
+    ;
+}
+
+.main-content {
+    grid-area: mainContent;
+    background-color: #6FC041;
+
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #B36AE2;
+}
+
+.twin {
+    grid-area: twin;
+    background-color: #F3901A;
+}
+
+.twin-sub {
+    grid-area: twin-sub;
+    background-color: #F3901A;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width: 900px) {
+    .container {
+        grid-template-areas:
+            "sidebar sidebar sidebar sidebar"
+            "mainContent mainContent mainContent mainContent"
+            "twin twin twin twin"
+            "twin-sub twin-sub twin-sub twin-sub"
+        ;
+    }
+}
